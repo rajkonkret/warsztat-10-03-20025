@@ -19,3 +19,4 @@ if __name__ == '__main__':
 # 2 x shift - podreczna wyszukiwarka
 # wheel - powiekszanie
 # theme
+# ctr alt l - - formatowanie kodu do PEP8
