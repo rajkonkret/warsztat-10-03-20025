@@ -130,3 +130,85 @@ print(wersja)  # 3.900001
 a = round(wersja)
 b = round(wersja, 2)
 print(a, b)
+
+name = "Radek"
+print(f"{name:<10}")  # "Radek     "
+print(f"{name:>20}")  # "               Radek"
+print(f"{name:^25}")  # "          Radek          "
+
+# teksty są niemutowalne
+imie = "Radek Radek"
+# nie zmienia oryginalnej zmiennej
+print(imie)  # Radek Radek
+print(imie.upper())  # RADEK RADEK
+name_upper = imie.upper()
+print(name_upper)  # RADEK RADEK
+
+liczba = 9087896543123
+print(type(liczba))
+print(f"Nasza duża liczba {liczba}")
+print(f"Nasza duża liczba {liczba:,}")
+print(f"Nasza duża liczba {liczba:_}")
+# Nasza duża liczba 9087896543123
+# Nasza duża liczba 9,087,896,543,123
+# Nasza duża liczba 9_087_896_543_123
+
+liczba = 9_087_896_543_123
+print(type(liczba))  # <class 'int'>
+# Nasza duża liczba 9,087,896,543,123
+print(f"Nasza duża liczba {liczba:,}".replace(",", "."))  # Nasza duża liczba 9.087.896.543.123
+
+# boolean, typ logiczny
+# 1, 0
+# prawda, falsz
+# True, False
+
+print(int(True))  # 1
+print(int(False))  # 0
+
+#  bool() - rzutowaniena boolean - typ logiczny
+print(bool(0))  # False
+print(bool(1))  # True
+
+print(bool(100))  # True
+print(bool(-100))  # True
+print(bool("radek"))  # True
+
+print(bool(""))  # False
+print(bool(None))  # False, nie wiem, wartość nieokreslony, odpowiednik null
+
+tekst = "    Tekst    "
+# usunąć spacje z przodu i z tyłu
+print(tekst.strip())  # "Tekst"
+print(tekst.lstrip())  # "Tekst    "
+print(tekst.rstrip())  # "    Tekst"
+
+a = 10
+print(f"Zmienna a = {a}")
+print(f"Zmienna {a = }")
+# Zmienna a = 10
+# Zmienna a = 10
+
+name_1 = "Radek"
+name_2 = "Radek"
+print(name_1 == name_2)  # True
+
+name_1 = "radek"
+name_2 = "Radek"
+print(name_1 == name_2)  # False
+print(name_1.lower() == name_2.lower())  # True
+
+name_1 = "groẞ"
+name_2 = "GROSS"
+print(name_1.lower() == name_2.lower())  # False
+
+# """ Return a version of the string suitable for caseless comparisons. """
+print(name_1.casefold() == name_2.casefold())  # True
+
+text = "Witaj Świecie"
+encode_s = text.encode("utf-8")
+print(encode_s)  # b'Witaj \xc5\x9awiecie' postac bajtów
+print(type(encode_s))  # class 'bytes'>
+# \xc5\x9a wartość bajtów w systemie szesnatków c5 = 197 dziesietnie
+
+print(encode_s.decode("utf-8"))  # Witaj Świecie
