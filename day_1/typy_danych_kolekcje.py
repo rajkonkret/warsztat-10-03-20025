@@ -69,6 +69,62 @@ print(f"{a=}, {b=}")
 tupla = 1, 2, 3
 # a, b = tupla # ValueError: too many values to unpack (expected 2)
 a, *b = tupla  # * pozostałe
-print(f"{a=}, {b=}") # a=1, b=[2, 3]
+print(f"{a=}, {b=}")  # a=1, b=[2, 3]
 
+# zbiór (set) - przechowuje unikalne wartości
+# nie posiada indeksu, nie zachowuje kolejności przy dodawaniu elementów
+lista = [44, 55, 66, 77, 33, 31, 33, 55, 11]
+zbior = set(lista)
+print(zbior)  # {33, 66, 11, 44, 77, 55, 31}
+pusty_zbior = set()
+print(pusty_zbior)  # set()
+pusty_zbior.add(18)
+pusty_zbior.add(18)
+pusty_zbior.add(18)
+pusty_zbior.add(33)
+pusty_zbior.add(55)
+pusty_zbior.add(76)
+print(pusty_zbior)  # {33, 18, 76, 55}
 
+# suma zbiorów, zwraca nowy zbiór
+print(zbior | pusty_zbior)  # {33, 66, 11, 44, 77, 76, 18, 55, 31}
+print(zbior.union(pusty_zbior))  # {33, 66, 11, 44, 77, 76, 18, 55, 31}
+
+# frozenset() - niemutowalny zbiór, może być zagnieżdzony
+imm_set = frozenset([1, 2, 3, 4])
+print(imm_set)  # frozenset({1, 2, 3, 4})
+nested_set = {frozenset([1, 2]), frozenset([3, 4])}
+print(nested_set)  # {frozenset({3, 4}), frozenset({1, 2})}
+
+# słownik
+# para klucz-wartosc
+# {"name": "Radek", 'age':89}
+# klucze nie mogą się powtórzyc
+
+slownik = {}
+print(slownik)  # {}
+print(type(slownik))  # <class 'dict'>
+
+slownik = dict()
+print(slownik)  # {}
+print(type(slownik))  # <class 'dict'>
+
+slownik['name'] = "Radek"
+slownik['age'] = 90
+print(slownik)  # {'name': 'Radek', 'age': 90}
+
+print(slownik.keys())  # dict_keys(['name', 'age'])
+print(slownik.values())  # dict_values(['Radek', 90])
+print(slownik.items())  # dict_items([('name', 'Radek'), ('age', 90)])
+
+print(slownik['name'])  # Radek
+# print(slownik['namE'])  # KeyError: 'namE'
+
+print(slownik.get("NAme"))  # None
+print(slownik.get("NAme", 'default'))  # default
+
+lista_duplikaty = [33, 66, 11, 44, 77, 45, 18, 54, 31, 55]
+print(dict.fromkeys(lista_duplikaty))
+# {33: None, 66: None, 11: None, 44: None, 77: None, 45: None, 18: None, 54: None, 31: None, 55: None}
+print(list(dict.fromkeys(lista_duplikaty)))
+# [33, 66, 11, 44, 77, 45, 18, 54, 31, 55] usunięte duplikaty, zachowana kolejnośc
