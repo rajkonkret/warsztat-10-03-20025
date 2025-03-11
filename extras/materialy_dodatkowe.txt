@@ -116,3 +116,7 @@ spam -= 1    spam = spam - 1
 spam *= 1    spam = spam * 1
 spam /= 1    spam = spam / 1
 spam %= 1    spam = spam % 1
+
+https://www.hackerrank.com/challenges/py-hello-world/problem?isFullScreen=true
+https://pl.altapps.net/soft/hackerrank-com
+https://www.w3schools.com/python/default.asp
