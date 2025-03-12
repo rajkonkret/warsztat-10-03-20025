@@ -30,5 +30,24 @@ def process_transactions(transactions, transaction_type, currency):
     return total
 
 
-result = process_transactions(transactions, "income", "EUR")
-print("Result:", result) # Result: 100
+# pip install pytest
+# cd .\day_3\
+# result = process_transactions(transactions, "income", "EUR")
+# print("Result:", result) # Result: 100
+# pytest .\fun_14.py
+
+# def test_transaction_processing():
+#     assert map_tranactions(filter_transactions(transactions, "income"), "USD") == [1000, 500, 700, 0]
+# # Launching pytest with arguments C:\Users\CSComarch\PycharmProjects\warsztat-10-03-20025\day_3\fun_14.py --no-header --no-summary -q in C:\Users\CSComarch\PycharmProjects\warsztat-10-03-20025\day_3
+# #
+# # ============================= test session starts =============================
+# # collecting ... collected 1 item
+# #
+# # fun_14.py::test_transaction_processing PASSED                            [100%]
+# #
+# # ============================== 1 passed in 0.03s ==============================
+# #
+# # Process finished with exit code 0
+#     assert reduce_transactions([1000, 500, 700, 0]) == 2200
+#
+#     print("All test passed")
