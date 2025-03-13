@@ -1,7 +1,9 @@
 import time
+
 import requests as re
 
 url = 'https://api.nbp.pl/api/exchangerates/rates/A/EUR/'
+
 
 def multiple_requests():
     start_time = time.time()
