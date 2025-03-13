@@ -42,3 +42,8 @@ while True:
         print(f"Wynik wynosi {result}")
     finally:
         print("Koniec")
+# Podaj pierwszą liczbę5
+# Podaj drugą liczbę3
+# MyTypeError
+# Koniec
+# Podaj pierwszą liczbęKoniec
