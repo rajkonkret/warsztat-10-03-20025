@@ -31,7 +31,7 @@ while True:
         b = input("Podaj drugą liczbę")
         if a == "q" or b == "q":
             break
-        result = my_function(a, b)
+        result = my_function(int(a), int(b))
     except MyTypeError:
         print("MyTypeError")
     except MyValueError:
