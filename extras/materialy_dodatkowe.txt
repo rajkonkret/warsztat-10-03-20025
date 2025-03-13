@@ -125,3 +125,4 @@ https://www.w3schools.com/python/default.asp
  pip install -r .\requirements.txt
   pip install pyinstaller
   pyinstaller --onefile --noconsole .\okno_tk.py
+ pyinstaller --onefile .\kl8_zad.py
